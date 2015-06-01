@@ -14,3 +14,5 @@ module all(){
 	translate([0,-paddle_gear_span,-paddle_gear_depth])
 		arm(true);
 }
+
+all();
