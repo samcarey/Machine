@@ -1,3 +1,5 @@
+include <link_gear.scad>;
+
 paddle_gear_r = 50;
 paddle_gear_h = 15;
 paddle_gear_declination = 45;

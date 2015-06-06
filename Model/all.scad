@@ -2,6 +2,7 @@ include <link_gear.scad>;
 include <arm.scad>;
 
 module all(){
+	$fn = 50;
 	translate([0,-link_gear_r,0])
 		rotate([0,90,0])
 			link_gear();

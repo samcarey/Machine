@@ -11,8 +11,6 @@ paddle_upper_l = 75;
 paddle_upper_t = 8;
 paddle_upper_w = 15;
 
-include <forearm.scad>
-
 module paddle_upper(){
 	paddle_upper_l = 75;
 	paddle_upper_t = 8;
@@ -30,8 +28,6 @@ module paddle_upper(){
 					cube([paddle_upper_t+1, hook_t+hook_gap, hook_w+hook_gap], center = true);
 			}
 	}
-	translate([0,-forearm_l+clip_l*3,0]) mirror([1,0,0])
-		forearm();
 }
 
-paddle_upper();
+//paddle_upper();
