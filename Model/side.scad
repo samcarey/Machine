@@ -1,8 +1,7 @@
-include <forearm.scad>;
+include <parameters.scad>;
+use <forearm.scad>;
+use <paddle_upper.scad>;
 
-pos1 = 1;
-pos2 = 0;
-wrist_angle = 45;
 module side(){
 	paddle_upper();
 	translate([0,upper_length_resolution/2+upper_length_resolution*pos1,0]){ 
@@ -17,4 +16,4 @@ module side(){
 	}
 }
 
-//side();
+side();

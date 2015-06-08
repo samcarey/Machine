@@ -1,9 +1,7 @@
-
-include <paddle_gear.scad>;
-include <paddle_shaft.scad>;
-include <paddle.scad>;
-
-paddle_upper_declination = 135;
+include <parameters.scad>;
+use <paddle_gear.scad>;
+use <paddle_shaft.scad>;
+use <paddle.scad>;
 
 module arm(reverse){
 	rotate([0,90,0])
@@ -15,14 +13,14 @@ module arm(reverse){
 	translate([paddle_shaft_h/2,0,0]){
 		if(reverse){
 			mirror([0,1,0])
-				rotate([-paddle_upper_declination,0,0])
-					paddle();
+				rotate([-paddle_upper_declination-declination_offset,0,0])
+					paddle(true);
 		}else{
-			rotate([-paddle_upper_declination,0,0])
-				paddle();
+			rotate([-paddle_upper_declination+declination_offset,0,0])
+				paddle(false);
 		}
 	}
 
 }
 
-//arm();
+arm();

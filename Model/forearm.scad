@@ -1,27 +1,6 @@
-include <paddle_upper.scad>
 
-slide_gap = 0.1;
-forearm_w = paddle_upper_w-shell*2-slide_gap*2;
-wrist_joint_outer = forearm_w/2;
-wrist_joint_inner = wrist_joint_outer/3;
-
-forearm_t = paddle_upper_t-shell*2-slide_gap*2;
-forearm_l = paddle_upper_l+wrist_joint_outer;
-
-bolt_r = wrist_joint_inner-slide_gap;
-bolt_h = forearm_t*2+slide_gap;
-bolt_groove = bolt_r*0.4;
-
-head_hook = bolt_groove/2-slide_gap*2;
-head_r = bolt_r+head_hook;
-
-clip_l = shell*4+hook_t+slide_gap;
-clip_h = shell*2+forearm_t;
-
-thumb_hook_h = shell*2;
-thumb_hook_t = shell;
-thumb_hook_l = shell*3;
-hook_h = shell*2+thumb_hook_h;
+include <parameters.scad>;
+use <paddle_upper.scad>;
 
 module bolt(){
 	module slug(){
@@ -99,7 +78,6 @@ module lower_forearm(pos2){
 	}
 }
 
-//lower_forearm(1);
+lower_forearm(1);
 //forearm(true);
-
 

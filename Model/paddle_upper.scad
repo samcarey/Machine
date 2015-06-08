@@ -1,20 +1,6 @@
-include <paddle_bar.scad>
-
-upper_length_resolution = 12;
-hook_w = 6;
-hook_t = 3;
-hook_gap = 0.1;
-shell = 2.5;
-groove = 3;
-
-paddle_upper_l = 75;
-paddle_upper_t = 8;
-paddle_upper_w = 15;
+include <paddle_bar.scad>;
 
 module paddle_upper(){
-	paddle_upper_l = 75;
-	paddle_upper_t = 8;
-	paddle_upper_w = 15;
 	notches = round((paddle_upper_l-hook_t-shell*2)/upper_length_resolution-0.5);
 
 	difference(){
@@ -30,4 +16,4 @@ module paddle_upper(){
 	}
 }
 
-//paddle_upper();
+paddle_upper();
